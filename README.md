@@ -98,12 +98,19 @@ To install Pygeoip:
 
 	The 'pip3' tells pip to install pygeoip for Python 3.4
 
+[!] The parsing of option is accomplished using argparse, so please install it:
+
+	eg.
+	
+	sudo pip3 install argparse
+
 [!] If you can get the software to run, you may need to specify the version of Python before
 calling the script:
 
 	eg.
 
 	sudo python3.4 glocal.py -F addresses.txt
+
 
 Created by:
 
