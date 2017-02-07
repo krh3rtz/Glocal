@@ -1,0 +1,7 @@
+# Please donwload the Maxmind GeoIp free database (Copyright© 2012-2017 MaxMind, Inc. All Rights Reserved.):
+# from http://dev.maxmind.com/geoip/legacy/geolite/
+# make sure is the 'GeoLiteCity.dat.gz' database
+#
+# Once downloaded, extract it in this folder and make sure its name is:
+# 'GeoLiteCity.dat'
+#
