@@ -62,7 +62,7 @@ on the IP continent it will give a specific color. These are:
 
 This helps to better identify IPs.
 
-The information that is provided by Glocate is:
+The information that is provided by Glocal is:
 
 	country code
 	country name
@@ -89,8 +89,8 @@ more information about the IP addresses.
 
 	sudo ./glocal.py --usage
 
-[!] This project has been developed  in Python 3.4, so make sure you have pygeoip installed.
-for this versionof Python.
+[!] This project has been developed  in Python 3.4, so make sure you have pygeoip installed for 
+this version of Python.
 
 To install Pygeoip:
 	
