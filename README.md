@@ -6,19 +6,19 @@ in order to geo locate ip addresses on the globe.
 
 This application has been built using great projects:
 
-[+] Pygeoip (© Copyright 2014, Jennifer Ennis, William Tisäter. ):
+[+] Pygeoip (2014, Jennifer Ennis, William Tisäter. ):
 
 -> pygeoip.readthedocs.io/en/v0.3.2/
 
-[+] Maxmind GeoIp free database (Copyright© 2012-2017 MaxMind, Inc. All Rights Reserved.):
+[+] Maxmind GeoIp free database (2012-2017 MaxMind, Inc. All Rights Reserved.):
 
 -> http://dev.maxmind.com/geoip/geoip2/geolite2/
 
-[+] Shodan.io (© 2013-2017, All Rights Reserved - Shodan®):
+[+] Shodan.io (2013-2017, Shodan®):
 
 -> https://www.shodan.io
 
-[+] Censys.io (Copyright 2016 Regents of the University of Michigan)
+[+] Censys.io (2016 Regents of the University of Michigan)
 
 -> https://www.censys.io
 
