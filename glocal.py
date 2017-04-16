@@ -17,9 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
   
 '''
-
 #!/usr/bin/env python3.4
-
 
 import argparse
 import pygeoip
@@ -27,16 +25,33 @@ import time
 
 banner = '''By:
 
-==================================================================
-| ##   ## ######## ##   ##   ###### ########  ######## ########   |
-| ##  ##  ##    ## ##   ##       #  ##    ##     ##          #    |
-| ## ##   ##    ## ##   ##      ##  ##    ##     ##         #     |
-| ## ##   ######   #######        # ######       ##       #       |
-| ##  ##  ##   ##  ##   ##        # ##   ##      ##     #         |
-| ##   ## ##    ## ##   ##   #####  ##    ##     ##    ########   |
-|                                                                 |
-|     Exploiting vulnerabilities, creating new ways through...    |
-==================================================================
+									
+	 ██ ▄█▀ ██▀███   ██░ ██ ▓█████  ██▀███  ▄▄▄█████▓▒███████▒	
+ 	 ██▄█▒ ▓██ ▒ ██▒▓██░ ██▒▓█   ▀ ▓██ ▒ ██▒▓  ██▒ ▓▒▒ ▒ ▒ ▄▀░	
+	▓███▄░ ▓██ ░▄█ ▒▒██▀▀██░▒███   ▓██ ░▄█ ▒▒ ▓██░ ▒░░ ▒ ▄▀▒░ 	
+	▓██ █▄ ▒██▀▀█▄  ░▓█ ░██ ▒▓█  ▄ ▒██▀▀█▄  ░ ▓██▓ ░   ▄▀▒   ░	
+	▒██▒ █▄░██▓ ▒██▒░▓█▒░██▓░▒████▒░██▓ ▒██▒  ▒██▒ ░ ▒███████▒	
+	▒ ▒▒ ▓▒░ ▒▓ ░▒▓░ ▒ ░░▒░▒░░ ▒░ ░░ ▒▓ ░▒▓░  ▒ ░░   ░▒▒ ▓░▒░▒	
+	░ ░▒ ▒░  ░▒ ░ ▒░ ▒ ░▒░ ░ ░ ░  ░  ░▒ ░ ▒░    ░    ░░▒ ▒ ░ ▒	
+	░ ░░ ░   ░░   ░  ░  ░░ ░   ░     ░░   ░   ░      ░ ░ ░ ░ ░	
+	░  ░      ░      ░  ░  ░   ░  ░   ░                ░ ░    	
+	                                                 ░        	
+									
+	__"Exploiting vulnerabilities, creating new ways through"__	
+'''
+
+glocalb = '''
+
+			 ██████╗ ██╗      ██████╗  ██████╗ █████╗ ██╗     
+			██╔════╝ ██║     ██╔═══██╗██╔════╝██╔══██╗██║     
+			██║  ███╗██║     ██║   ██║██║     ███████║██║     
+			██║   ██║██║     ██║   ██║██║     ██╔══██║██║     
+			╚██████╔╝███████╗╚██████╔╝╚██████╗██║  ██║███████╗
+			 ╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝
+			
+			 	A public IPv4 Geolocalization Tool
+			 		  By: Krhertz
+
 '''
 
 class glocate ():
@@ -85,12 +100,24 @@ class glocate ():
 
 	def placeMark (self, ddaddr):
 
-
 		#data = [icon, c_code, country, city, region, area_c, zip, time, longitude, latitude]
-		#	 0	1	2	3	4	5      6     7	     8		9
+		#			0		1		2		3	4		5		6		7		8		9
+
 
 		try:
 			data = self.ip_info (ddaddr)
+
+			print ('----------------HOST '+ddaddr+'---------------')
+			print ('[+] Country Code: ' + data[1])
+			print ('[+] Country : ' + data[2])
+			print ('[+] City : ' + data[3])
+			print ('[+] Region Code: ' + data[4])
+			print ('[+] Area Code : '+ str(data[5]))
+			print ('[+] Zip_code : ' + str(data[6]))
+			print ('[+] Time : ' + data[7])
+			print ('[+] Latitude: '+ str(data [9]))
+			print ('[+] Longitude: '+ str(data [8]))
+			print ('[+] More:\nhttps://www.shodan.io/host/'+ ddaddr+'\nhttps://censys.io/ipv4/'+ ddaddr)
 
 			mark = (
 				'<Placemark>\n'
@@ -154,8 +181,12 @@ if __name__ == '__main__':
 	addrs = args.addrs
 	targets = []
 
+	print (glocalb)
 	for addr in addrs.readlines():
 			host = addr.strip('\n')
 			targets.append (host)
 	kml = glocate ()
 	kml.KML_FILE (targets)
+
+	print ('\n\n\n[+] KML file under \'KML/\'\n')
+	print (banner)
