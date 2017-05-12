@@ -173,20 +173,28 @@ if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser(usage='usage:\n-F <file_with_hosts>\n'+glocalb)
 	parser.add_argument ('-F', dest='addrs', type=argparse.FileType('r'), help='Hosts in dotted decimal notation (eg. 192.168.1.1)')
+	parser.add_argument ('-H', dest='host', type=argparse.FileType('r'), help='Hosts in dotted decimal notation (eg. 192.168.1.1)')
 	args = parser.parse_args()
-	if (args.addrs == None):
+	if (args.addrs == None and args.host == None):
 		print (parser.usage)
 		exit (0)
-
-	addrs = args.addrs
-	targets = []
-
 	print (glocalb)
-	for addr in addrs.readlines():
-			host = addr.strip('\n')
-			targets.append (host)
-	kml = glocate ()
-	kml.KML_FILE (targets)
-
+	
+	targets = []
+	
+	if host == None:
+		addrs = args.addrs		
+		for addr in addrs.readlines():
+				ip = addr.strip('\n')
+				targets.append (ip)
+		kml = glocate ()
+		kml.KML_FILE (targets)
+	else:
+		host = args.host
+		targets.append (host)
+		
+		kml  = glocate ()
+		kml.KML_FILE (targets)
+		
 	print ('\n\n\n[+] KML file under \'KML/\'\n')
 	print (banner)
