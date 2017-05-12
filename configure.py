@@ -37,7 +37,7 @@ def main ():
 	print ('[+] Dowloading Database: \n')
 
 	print ('[*] Extracting database.')
-	command = 'wget '+ DBlink +' ; bzip2 -d GeoLiteCity.dat.gz; mv GeoliteCity.dat /database; rm -rf GeoLiteCity.dat.gz'
+	command = 'wget '+ DBlink +' ; bzip2 -d GeoLiteCity.dat.gz; mv GeoLiteCity.dat /database; rm -rf GeoLiteCity.dat.gz'
 	os.system (command)
 	
 	result = requ ()
