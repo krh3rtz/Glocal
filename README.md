@@ -91,7 +91,9 @@ more information about the IP addresses.
 
 [!] This project has been developed  in Python 3.4, yet it also works on python 3.5.
 
-[!] Make sure you run the 'configure.py' binary to install both the Python modules and the Database
+[!] Make sure you have 'guzip' installed on your system.
+
+[!] Make sure you run the 'configure.py' binary to install both the Python modules and the Database.
 
 	eg.
 	sudo ./configure.py
