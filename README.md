@@ -52,13 +52,13 @@ The output of this will be under "KML" folder.
 One of the features that Glocal has, is the seclusion of pin points by color. Depending
 on the IP continent it will give a specific color. These are:
 
-	America        -> 	Green
-	Africa         -> 	Yellow
-	Europe         -> 	Blue
-	Asia           -> 	Red
-	Oceania        -> 	White
-	Antartic       -> 	Purple
-	None 		   ->	Pink-pushpin
+	America        	-> 	Green
+	Africa         	-> 	Yellow
+	Europe         	-> 	Blue
+	Asia           	-> 	Red
+	Oceania        	-> 	White
+	Antartic       	-> 	Purple
+	None		->	Pink-pushpin
 
 This helps to better identify IPs.
 
@@ -89,23 +89,13 @@ more information about the IP addresses.
 
 	sudo ./glocal.py --usage
 
-[!] This project has been developed  in Python 3.4, so make sure you have pygeoip installed for 
-this version of Python.
+[!] This project has been developed  in Python 3.4, yet it also works on python 3.5.
 
-To install Pygeoip:
+[!] Make sure you install the Python modules listed in the "requirements" file:
 	
-	pip3 install pygeoip
+	pip3 install -r requirements
 
-	The 'pip3' tells pip to install pygeoip for Python 3.4
-
-[!] The parsing of option is accomplished using argparse, so please install it:
-
-	eg.
-	
-	sudo pip3 install argparse
-
-[!] If you can get the software to run, you may need to specify the version of Python before
-calling the script:
+[!] If you can get the software to run, maybe you have several Python versions for ypu may need to specify the version of Python before calling the script:
 
 	eg.
 
