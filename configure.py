@@ -36,11 +36,10 @@ def main ():
 	DBlink = 'http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'
 	print ('[+] Dowloading Database: \n')
 
-	command = 'wget '+ DBlink +' ; bzip -d GeoLiteCity.dat.gz; mv GeoliteCity.dat /database; rm -rf GeoLiteCity.dat.gz'
+	print ('[*] Extracting database.')
+	command = 'wget '+ DBlink +' ; bzip2 -d GeoLiteCity.dat.gz; mv GeoliteCity.dat /database; rm -rf GeoLiteCity.dat.gz'
 	os.system (command)
 	
-	print ('[+] Database extracted correctly.\n[+] Installing requirements')
-
 	result = requ ()
 
 	if result == 1:
