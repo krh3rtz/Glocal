@@ -171,9 +171,9 @@ class glocate ():
 
 if __name__ == '__main__':
 
-	parser = argparse.ArgumentParser(usage='usage:\n-F <file_with_hosts>\n'+glocalb)
-	parser.add_argument ('-F', dest='addrs', type=argparse.FileType('r'), help='Hosts in dotted decimal notation (eg. 192.168.1.1)')
-	parser.add_argument ('-H', dest='host', type=argparse.FileType('r'), help='Hosts in dotted decimal notation (eg. 192.168.1.1)')
+	parser = argparse.ArgumentParser(usage='usage:\n-F <file_with_hosts> -H <single_host_ip>\n'+glocalb)
+	parser.add_argument ('-F', dest='addrs', type=argparse.FileType('r'), help='List of hosts in dotted decimal notation (eg. 192.168.1.1)')
+	parser.add_argument ('-H', dest='host', type=str, help='Single host ip in dotted decimal notation.')
 	args = parser.parse_args()
 	if (args.addrs == None and args.host == None):
 		print (parser.usage)
