@@ -91,9 +91,14 @@ more information about the IP addresses.
 
 [!] This project has been developed  in Python 3.4, yet it also works on python 3.5.
 
-[!] Make sure you install the Python modules listed in the "requirements" file:
-	
-	pip3 install -r requirements
+[!] Make sure you run the 'configure.py' binary to install both the Python modules and the Database
+
+	eg.
+	sudo ./configure.py
+		
+		or
+		
+	sudo python3.4 ./configure.py
 
 [!] If you can get the software to run, maybe you have several Python versions for ypu may need to specify the version of Python before calling the script:
 
