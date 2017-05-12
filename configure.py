@@ -47,7 +47,6 @@ def main ():
 		print ('[+] Requirements correctly installed')
 	else:
 		print (str (result)
-			
 	print  ('By Krh3rtz')
 
 if __name__ == '__main__':
