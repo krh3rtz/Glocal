@@ -182,7 +182,7 @@ if __name__ == '__main__':
 	
 	targets = []
 	
-	if host == None:
+	if args.host == None:
 		addrs = args.addrs		
 		for addr in addrs.readlines():
 				ip = addr.strip('\n')
