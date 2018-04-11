@@ -4,7 +4,7 @@ A public IP addresses geo-localization script.
 Glocal is a small application coded in Python 3.4, used to produce KML files
 in order to geo locate ip addresses on the globe.
 
-This application has been built using great projects:
+This application has been built using some great projects:
 
 [+] Pygeoip (2014, Jennifer Ennis, William Tisäter. ):
 
@@ -47,10 +47,10 @@ Once this file is specified you can start the script:
 	sudo ./glocal.py -F addresses.txt
 
 
-The output of this will be under "KML" folder.
+The output of this will be under "KML" folder so Don't Delete It.
 
-One of the features that Glocal has, is the seclusion of pin points by color. Depending
-on the IP continent it will give a specific color. These are:
+One of the features that Glocal has is the seclusion of pin points by color. Depending
+on the IPs continent it will show a specific color. These are:
 
 	America        	-> 	Green
 	Africa         	-> 	Yellow
@@ -102,7 +102,7 @@ more information about the IP addresses.
 		
 	sudo python3.4 ./configure.py
 
-[!] If you can get the software to run, maybe you have several Python versions for ypu may need to specify the version of Python before calling the script:
+[!] If you can't get the software to run, maybe you have other Python versions. Insuch a case specify the version of Python before calling the script:
 
 	eg.
 
