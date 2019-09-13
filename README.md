@@ -14,6 +14,9 @@ This application has been built using some great projects:
 
 -> http://dev.maxmind.com/geoip/geoip2/geolite2/
 
+NOTE: The database has changed. However I uploaded it to the "database" folder in
+the project.
+
 [+] Shodan.io (2013-2017, Shodan®):
 
 -> https://www.shodan.io
@@ -108,6 +111,8 @@ more information about the IP addresses.
 
 	sudo python3.4 glocal.py -F addresses.txt
 
+
+PLEASE USE VIRTUALENV!
 
 Created by:
 									

@@ -33,13 +33,6 @@ def requ ():
 		pass
 
 def main ():
-	DBlink = 'http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'
-	print ('[+] Dowloading and extracting Database \n')
-
-	
-	command = 'curl -L -O '+ DBlink +' ; gunzip GeoLiteCity.dat.gz; mv GeoLiteCity.dat database/; rm -rf GeoLiteCity.dat.gz'
-	os.system (command)
-	
 	result = requ ()
 
 	if result == 1:

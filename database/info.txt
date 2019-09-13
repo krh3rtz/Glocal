@@ -4,4 +4,5 @@
 #
 # Once downloaded, extract it in this folder and make sure its name is:
 # 'GeoLiteCity.dat'
-#
+# UPDATE
+# The database is already included in the project. Enjoy!
